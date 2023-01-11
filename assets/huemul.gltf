@@ -44,7 +44,7 @@
         },
         {
             "mesh" : 1,
-            "name" : "cielo",
+            "name" : "tierra",
             "rotation" : [
                 0.7071068286895752,
                 0,
