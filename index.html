@@ -4,20 +4,20 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.5/dist/mindar-image-aframe.prod.js"></script>
-    <script src="./draco_decoder.wasm"></script>
-    <script src="./draco_wasm_wrapper.js"></script>
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: ./assets/targets.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="card" src="./assets/ppar.png" />
         <a-asset-item id="huemul" src="https://cdn.jsdelivr.net/gh/marianobasti/patagoniapicnic-ar/assets/huemul.gltf"></a-asset-item>
+        <a-asset-item id="aguila" src="https://cdn.jsdelivr.net/gh/marianobasti/patagoniapicnic-ar/assets/aguila.gltf"></a-asset-item>
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="#card" position="0 0 0" height="0.6" width="1" rotation="0 0 0"></a-plane>
         <a-gltf-model rotation="0 -90 0 " position="0 0 0" scale="2 2 2" src="#huemul">
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-gltf-model rotation="0 -90 0 " position="0 0 0" scale="2 2 2" src="#aguila">
       </a-entity>
     </a-scene>
   </body>
